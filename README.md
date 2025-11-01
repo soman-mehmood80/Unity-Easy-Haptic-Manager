@@ -13,14 +13,13 @@ It gives you precise vibration control across all Android devices — from older
 - ✅ Supports **custom vibration duration and amplitude**
 - ✅ Provides **5 adjustable haptic levels** — from subtle taps to strong impacts
 - ✅ Safe fallback (`Handheld.Vibrate`) in Editor or non-Android builds
-- ✅ Requires only a single line to initialize
 
 ---
 
 ## 📦 Installation
 
 1. **Clone or download** this repository.  
-2. Copy the following folders into your Unity project:
+2. Copy the folders into your Unity project.
 3. Ensure your Android Manifest includes: <em>(This is already included if you use the provided manifest in /Plugins/Android/..)</em>
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
@@ -40,11 +39,11 @@ void Start() => HapticManager.Initialize();
 
 2️⃣ <strong>Simple Vibrate</strong>: predefined haptic levels
 ```
-1. HapticManager.SimpleVibrate(HapticLevel.Light);
-2. HapticManager.SimpleVibrate(HapticLevel.Medium);
-3. HapticManager.SimpleVibrate(HapticLevel.Heavy);
-4. HapticManager.SimpleVibrate(HapticLevel.Strong);
-5. HapticManager.SimpleVibrate(HapticLevel.ExtraStrong);
+1. HapticManager.SimpleVibrate(HapticLevel.VeryLight);
+2. HapticManager.SimpleVibrate(HapticLevel.Light);
+3. HapticManager.SimpleVibrate(HapticLevel.Medium);
+4. HapticManager.SimpleVibrate(HapticLevel.Heavy);
+5. HapticManager.SimpleVibrate(HapticLevel.Extreme);
 ```
 
 3️⃣ <strong>Custom Vibrate</strong>: define your own vibration
